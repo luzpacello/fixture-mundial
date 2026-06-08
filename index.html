@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixture Mundial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <div class="cabecera">
+            <h1>Mundial 2026</h1>
+        </div>
+        
+        <!-- TABS -->
+        <div class="tab">
+            <button class="tablinks" onclick="openFase(event, 'grupos')" id="defaultOpen">Fase de Grupos</button>
+            <button class="tablinks" onclick="openFase(event, 'eliminatorias')">Fase Eliminatoria (32)</button>
+            <button class="tablinks" onclick="openFase(event, 'octavos')">Octavos de final</button>
+            <button class="tablinks" onclick="openFase(event, 'cuartos')">Cuartos de final</button>
+            <button class="tablinks" onclick="openFase(event, 'semi')">Semifinal</button>
+            <button class="tablinks" onclick="openFase(event, 'final')">Final</button>
+            <button class="tablinks" onclick="openFase(event, 'posi')">Posiciones</button>
+        </div>
+
+        <!-- TAB CONTENIDO -->
+        <div id="grupos" class="tabcontent">
+            <h2>Fase de grupos</h2>
+            <div id="grupos-container"></div>
+        </div>
+
+        <div id="eliminatorias" class="tabcontent">
+            <h2>Eliminatorias de 32</h2>
+            <div id="eliminatoria-container"></div>
+        </div>
+
+        <div id="octavos" class="tabcontent">
+            <h2>Octavos de final</h2>
+            <div id="octavos-container"></div>
+        </div>
+
+        <div id="cuartos" class="tabcontent">
+            <h2>Cuartos de final</h2>
+            <div id="cuartos-container"></div>
+        </div>
+
+        <div id="semi" class="tabcontent">
+            <h2>Semifinal</h2>
+            <div id="semi-container"></div>
+            <h2>3° puesto</h2>
+            <div id="puesto-container"></div>
+        </div>
+
+        <div id="final" class="tabcontent">
+            <h2>Final</h2>
+            <div id="final-container"></div>
+        </div>
+
+        <div id="posi" class="tabcontent">
+            <h2>Posiciones</h2>
+            <div class="posic">
+                <div class="pos-input">
+                    <p>1° lugar</p>
+                    <div class="buscador-equipo">
+                        <div class="input-contenedor">
+                            <span class="bandera-fija" id="bandera-puesto-1"></span>
+                            <input type="text" class="input-pais" data-target="puesto-1" placeholder="A definir...">
+                        </div>
+                        <div class="sugerencias-desplegable" id="sugerencias-puesto-1"></div>
+                    </div>
+                </div>
+                <div class="pos-input">
+                    <p>2° lugar</p>
+                    <div class="buscador-equipo">
+                        <div class="input-contenedor">
+                            <span class="bandera-fija" id="bandera-puesto-2"></span>
+                            <input type="text" class="input-pais" data-target="puesto-2" placeholder="A definir...">
+                        </div>
+                        <div class="sugerencias-desplegable" id="sugerencias-puesto-2"></div>
+                    </div>
+                </div>
+                <div class="pos-input">
+                    <p>3° lugar</p>
+                    <div class="buscador-equipo">
+                        <div class="input-contenedor">
+                            <span class="bandera-fija" id="bandera-puesto-3"></span>
+                            <input type="text" class="input-pais" data-target="puesto-3" placeholder="A definir...">
+                        </div>
+                        <div class="sugerencias-desplegable" id="sugerencias-puesto-3"></div>
+                    </div>
+                </div>
+                <div class="pos-input">
+                    <p>4° lugar</p>
+                    <div class="buscador-equipo">
+                        <div class="input-contenedor">
+                            <span class="bandera-fija" id="bandera-puesto-4"></span>
+                            <input type="text" class="input-pais" data-target="puesto-4" placeholder="A definir...">
+                        </div>
+                        <div class="sugerencias-desplegable" id="sugerencias-puesto-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="scripts/tabs.js"></script>
+    <script src="scripts/equipos.js"></script>
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>    
+</body>
+</html>
